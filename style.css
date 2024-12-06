@@ -1,27 +1,47 @@
 body {
-    background: linear-gradient(to bottom, #151515, #A91D3A, #C73659) fixed;
+    background: linear-gradient(to bottom, #C73659, #A91D3A, #151515) fixed;
     font-family: 'Overpass', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 /* HEADERS */
+.header {
+    color: #EEEEEE;
+    text-align: right;
+
+}
 h1 {
-    font-size: 75px;
     width: 100%;
+    /*background: linear-gradient(to right, #C73659, #A91D3A, #151515) fixed;*/
+    background: #494949;
+    margin: 0;
+    padding-right: 15px;
+    text-shadow: 4px 4px black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 h2 {
     font-size: 30px;
+    margin: 0;
+    padding-top: 15px;
+    line-height: 0px;
+    text-shadow: 2px 2px black;
+    text-align: left;
 }
 h3 {
     font-size: 17.5px;
     line-height: 0px;
-    padding: 2px;
+    padding-top: 5px;
 }
 .about-section {
     color: #ffffff;
     padding: 0px;
     margin: 20px;
+    text-align: left;
 }
 
 /* Sticky Header */
