@@ -27,16 +27,59 @@ h1 {
 h2 {
     font-size: 30px;
     margin: 0;
+    height: 15px;
     padding-top: 15px;
     line-height: 0px;
     text-shadow: 2px 2px black;
     text-align: left;
+    padding-bottom: 0px;
 }
 h3 {
-    font-size: 17.5px;
+    font-size: 15px;
+    float: bottom;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     line-height: 0px;
-    padding-top: 5px;
+    padding-top: 0px;
 }
+
+p {
+    text-indent: 10px;
+}
+
+/* Wrapper for stacking trapezoids */
+.trapezoid-wrapper {
+    position: relative; /* Allows positioning of child elements */
+    display: inline-block; /* Ensures elements stay snugly together */
+}
+
+/* Background trapezoid (peeking effect) */
+.back-trapezoid {
+    background-color: #737373; /* Darker gray for contrast */
+    position: absolute; /* Positioned relative to the wrapper */
+    z-index: 0; /* Sends it behind the main trapezoid */
+    clip-path: polygon(10% 0, 100% 0, 90% 90%, 0 90%); /* Same trapezoid shape */
+    padding: 10px 25px; /* Same padding as the main trapezoid */
+    width: 74%; /* Adjusts to content size */
+    height: 78%; /* Ensure it sizes properly */
+    top: 5px; /* Offset slightly downward */
+    left: 10px; /* Offset slightly to the right */
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2)); /* Optional shadow for depth */
+}
+
+/* Main trapezoid (foreground) */
+.main-trapezoid {
+    background-color: #494949; /* Original gray color */
+    color: white; /* White text for contrast */
+    position: relative; /* Keeps it on top */
+    z-index: 1; /* Ensures it appears in front of the back trapezoid */
+    clip-path: polygon(10% 0, 100% 0, 90% 90%, 0 90%); /* Same trapezoid shape */
+    padding: 10px 25px; /* Spacing inside the trapezoid */
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3)); /* Adds shadow for depth */
+}
+
 .about-section {
     color: #ffffff;
     padding: 0px;
