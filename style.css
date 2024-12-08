@@ -5,6 +5,25 @@ body {
     padding: 0;
 }
 
+/* The animation code */
+@keyframes Title-Animation {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  
+  /* The element to apply the animation to */
+  startup {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: Title-Animation;
+    animation-duration: 4s;
+  }
+
 /* HEADERS */
 .header {
     color: #EEEEEE;
@@ -12,17 +31,14 @@ body {
 
 }
 h1 {
-    width: 100%;
-    /*background: linear-gradient(to right, #C73659, #A91D3A, #151515) fixed;*/
-    background: #494949;
-    margin: 0;
-    padding-right: 15px;
-    text-shadow: 4px 4px black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 50px;
-    width: 100%;
-    position: sticky;
-    top: 0;
+    font-size: 30px;
+    margin-top: 10px;
+    height: 15px;
+    padding-top: 15px;
+    line-height: 0px;
+    text-shadow: 2px 2px black;
+    text-align: right;
+    padding-bottom: 0px;
 }
 h2 {
     font-size: 30px;
@@ -54,7 +70,7 @@ p {
 }
 
 /* Background trapezoid (peeking effect) */
-.back-trapezoid {
+.sub-back-trapezoid {
     background-color: #737373; /* Darker gray for contrast */
     position: absolute; /* Positioned relative to the wrapper */
     z-index: 0; /* Sends it behind the main trapezoid */
@@ -78,6 +94,45 @@ p {
     font-family: 'Overpass', sans-serif;
     text-align: center;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3)); /* Adds shadow for depth */
+}
+
+.title-trapezoid {
+    background-color: #494949; /* Original gray color */
+    color: white; /* White text for contrast */
+    position: relative; /* Keeps it on top */
+    z-index: 1; /* Ensures it appears in front of the back trapezoid */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 10% 80%); /* Same trapezoid shape */
+    padding: 10px 25px; /* Spacing inside the trapezoid */
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    top: 5px;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3)); /* Adds shadow for depth */
+}
+
+/* Background trapezoid (peeking effect) */
+.main-back-trapezoid-black {
+    background-color: #151515; /* Darker gray for contrast */
+    position: absolute; /* Positioned relative to the wrapper */
+    z-index: 0; /* Sends it behind the main trapezoid */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 10% 80%); /* Same trapezoid shape */
+    padding: 10px 25px; /* Same padding as the main trapezoid */
+    width: 74%; /* Adjusts to content size */
+    height: 82%; /* Ensure it sizes properly */
+    top: 5px;
+    right: 12px; /* Offset slightly to the right */
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2)); /* Optional shadow for depth */
+}
+.main-back-trapezoid-maroon {
+    background-color: #A91D3A; /* Darker gray for contrast */
+    position: absolute; /* Positioned relative to the wrapper */
+    z-index: -1; /* Sends it behind the main trapezoid */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 10% 80%); /* Same trapezoid shape */
+    padding: 10px 25px; /* Same padding as the main trapezoid */
+    width: 74%; /* Adjusts to content size */
+    height: 88%; /* Ensure it sizes properly */
+    top: 5px;
+    right: 16px; /* Offset slightly to the right */
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2)); /* Optional shadow for depth */
 }
 
 .about-section {
