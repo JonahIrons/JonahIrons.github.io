@@ -5,25 +5,6 @@ body {
     padding: 0;
 }
 
-/* The animation code */
-@keyframes Title-Animation {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
-  }
-  
-  /* The element to apply the animation to */
-  startup {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    background-color: red;
-    animation-name: Title-Animation;
-    animation-duration: 4s;
-  }
-
 /* HEADERS */
 .header {
     color: #EEEEEE;
@@ -116,10 +97,10 @@ p {
     z-index: 0; /* Sends it behind the main trapezoid */
     clip-path: polygon(0 0, 100% 0, 100% 80%, 10% 80%); /* Same trapezoid shape */
     padding: 10px 25px; /* Same padding as the main trapezoid */
-    width: 74%; /* Adjusts to content size */
+    width: 79%; /* Adjusts to content size */
     height: 82%; /* Ensure it sizes properly */
     top: 5px;
-    right: 12px; /* Offset slightly to the right */
+    right: 0;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2)); /* Optional shadow for depth */
 }
 .main-back-trapezoid-maroon {
@@ -128,10 +109,10 @@ p {
     z-index: -1; /* Sends it behind the main trapezoid */
     clip-path: polygon(0 0, 100% 0, 100% 80%, 10% 80%); /* Same trapezoid shape */
     padding: 10px 25px; /* Same padding as the main trapezoid */
-    width: 74%; /* Adjusts to content size */
-    height: 88%; /* Ensure it sizes properly */
+    width: 82%; /* Adjusts to content size */
+    height: 87%; /* Ensure it sizes properly */
     top: 5px;
-    right: 16px; /* Offset slightly to the right */
+    right: 0;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2)); /* Optional shadow for depth */
 }
 
