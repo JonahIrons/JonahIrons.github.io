@@ -44,9 +44,9 @@
 }
 
 nav {
-    display: flex;
+    display: flex; /* Makes elements go side by side */
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Puts space between side by side elements */
     flex-wrap: wrap;
 }
 
@@ -95,4 +95,35 @@ nav ul li a:hover::after { /* Line appears when hovering over button */
 
 .header-text h1 span {
     color: #A91D3A;
+}
+
+/*---------- About --------*/
+#about {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #292929, #450d19);
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%; /* Makes the width of the column be 35% */
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px; /* Rounds the corners of the image */
+}
+
+.about-col-2 {
+    flex-basis: 60%; /* Leaves 5% of space between the columns (since col-1 was 35% */
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
 }
