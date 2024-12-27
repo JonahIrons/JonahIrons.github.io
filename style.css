@@ -10,18 +10,32 @@
     background-color: #292929;
     width: 100%;
     height: 100vh;
-    background-position: center;
     font-family: 'Overpass', sans-serif;
     margin: 0;
     padding: 0;
     background-attachment: fixed;
 }
 
+.header-col-1 {
+    flex-basis: 35%; /* Makes the width of the column be 35% */
+    padding-top: 90px;
+    padding-left: 15px;
+}
+
+
+.header-col-2 {
+    flex-basis: 60%; /* Leaves 5% of space between the columns (since col-1 was 35%) */
+    padding-top: 60px;
+    padding-right: 20px;
+}
+
 .carousel {
-    width: 800px;
-    height: 800px;
+    width: 100%;
+    height: 80vh;
     background-size: cover;
-    background-image: url(images/carousel/1st.jpeg);
+    background-position: top;
+    border-radius: 15px;
+    background-image: url(images/carousel/jonah-turkstra.jpeg);
 }
 
 .fade {
@@ -114,7 +128,9 @@ nav ul li a:hover::after { /* Line appears when hovering over button */
     flex-basis: 35%; /* Makes the width of the column be 35% */
 }
 .about-col-1 img {
+    object-fit: cover;
     width: 100%;
+    height: 70%;
     border-radius: 15px; /* Rounds the corners of the image */
 }
 
