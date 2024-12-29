@@ -189,3 +189,10 @@ nav ul li a:hover::after { /* Line appears when hovering over button */
 .tab-contents.active-tab {
     display: block;
 }
+
+/* ------------ portfolio ------------ */
+#portfolio {
+    /* padding: 25px 0; */
+    background: linear-gradient(to bottom, #450d19, #77162b);
+    color: white;
+}
