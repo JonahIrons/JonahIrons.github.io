@@ -113,7 +113,8 @@ nav ul li a:hover::after { /* Line appears when hovering over button */
 
 /*---------- About --------*/
 #about {
-    padding: 150px 0;
+    padding: 300px 0;
+    padding-bottom: 0;
     background: linear-gradient(to bottom, #292929, #450d19);
     color: white;
 }
@@ -193,6 +194,7 @@ nav ul li a:hover::after { /* Line appears when hovering over button */
 /* ------------ portfolio ------------ */
 #portfolio {
     /* padding: 25px 0; */
+    padding-top: 0;
     background: linear-gradient(to bottom, #450d19, #77162b);
     color: white;
 }
