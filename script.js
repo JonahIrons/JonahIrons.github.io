@@ -33,6 +33,8 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
+
+
 /* Side menu animations (open and close) */
 var sideMenu = document.getElementById("sidemenu");
 

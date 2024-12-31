@@ -314,6 +314,7 @@ nav ul li a:hover::after { /* Line appears when hovering over button */
 }
 .contact-left p a i:hover {
     transform: translateY(-5px); /* Moves icon up and changes its color on hover */
+    color: blue;
 }
 
 .contact-right {
@@ -456,7 +457,7 @@ nav .fa-solid {
     }
 }
 
-#msg{
+#msg {
     color: green;
     margin-top: -40px;
     display: block;
